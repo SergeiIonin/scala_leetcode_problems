@@ -3,7 +3,9 @@ package twopointers.easy
 
 // https://leetcode.com/problems/merge-strings-alternately
 object MergeStringsAlternately1768:
+  import scala.annotation.tailrec
   def mergeAlternately(word1: String, word2: String): String =
+    @tailrec
     def iter(w1: List[Char], w2: List[Char], acc: List[Char], isFirst: Boolean): List[Char] =
       if (w1.isEmpty) {
         if (w2.isEmpty) {
