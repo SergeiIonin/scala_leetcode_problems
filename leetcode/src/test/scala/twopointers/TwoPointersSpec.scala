@@ -29,7 +29,7 @@ class TwoPointersSpec extends AnyFlatSpec with Matchers {
     reverseVowels("") shouldEqual ""
     reverseVowels("ab") shouldEqual "ab"
     reverseVowels("a.") shouldEqual "a."
-    reverseVowels("Yo! Bottoms up, U.S. Motto, boy!") shouldEqual "Yo! Bottoms Up, u.S. Motto boy!"
+    reverseVowels("Yo! Bottoms up, U.S. Motto, boy!") shouldEqual "Yo! Bottoms Up, u.S. Motto, boy!"
   }
   "compress" should "correctly compress the string" in {
     val arr1 = Array('a', 'a', 'b', 'b', 'c', 'c', 'c')
