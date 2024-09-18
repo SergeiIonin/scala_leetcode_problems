@@ -5,7 +5,8 @@ import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import hashtable.easy.ValidAnagram242.*
 import hashtable.easy.TwoSum1.*
-import hashtable.medium.ValidSudoku36._
+import hashtable.easy.UniqueOccurrences1207.*
+import hashtable.medium.ValidSudoku36.*
 
 class HashTableSpec extends AnyFlatSpec with Matchers {
   "isAnagram" should "correctly identify anagrams" in {
@@ -49,5 +50,21 @@ class HashTableSpec extends AnyFlatSpec with Matchers {
         Array('.', '.', '.', '.', '8', '.', '.', '7', '9')
       )
     ) shouldBe false
+  }
+  "uniqueOccurrences" should "return unique occurrences" in {
+    val arr0 = Array(1, 2, 2, 1, 1, 3)
+    uniqueOccurrences(arr0) shouldBe true
+    
+    val arr1 = Array(1, 2, 2, 1, 1, 2)
+    uniqueOccurrences(arr1) shouldBe false
+
+    val arr2 = Array.empty[Int]
+    uniqueOccurrences(arr2) shouldBe true
+    
+    val arr3 = Array(1)
+    uniqueOccurrences(arr3) shouldBe true
+    
+    val arr4 = Array(1, 1, 1, 1)
+    uniqueOccurrences(arr4) shouldBe true
   }
 }
